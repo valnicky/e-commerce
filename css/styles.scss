@@ -15,9 +15,23 @@ body {
     .section {
         width: 69%;
         display: inline-block;
-        background-color: rgb(240, 237, 237);
         height: 250px;
         float: left;
+
+        .item {
+            width: 300px;
+            height: auto;
+            background-color: #000;
+            color: $white;
+            margin: 10px 5px;
+            display: inline-block;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
     }
 
     .aside {

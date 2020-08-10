@@ -12,9 +12,21 @@ body {
 body .section {
   width: 69%;
   display: inline-block;
-  background-color: #f0eded;
   height: 250px;
   float: left;
+}
+
+body .section .item {
+  width: 300px;
+  height: auto;
+  background-color: #000;
+  color: #f7f7f3;
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+body .section .item img {
+  width: 100%;
 }
 
 body .aside {
