@@ -36,6 +36,16 @@ body .aside {
   background-color: #f0eded;
   height: 250px;
   float: left;
+  position: fixed;
+}
+
+@media (max-width: 767px) {
+  body .aside {
+    width: 100%;
+    display: block;
+    height: auto;
+    float: none;
+  }
 }
 
 body .aside .items p {

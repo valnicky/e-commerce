@@ -42,6 +42,14 @@ body {
         ;
         height: 250px;
         float: left;
+        position: fixed;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            display: block;
+            height: auto;
+            float: none;
+        }
 
         .items {
             p {

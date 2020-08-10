@@ -24,16 +24,47 @@ function init() {
         }
     ]
 
-    let sec = document.querySelector('.section');
+    let cart = [];
+
+    function inputChange(i, name, price) {
+        const article = document.querySelectorAll('.item')[i];
+        const btn = article.querySelector('.add ');
+        const input = article.querySelector('.quantity');
+        console.log('btn', input.value);
+
+        btn.onclick = () => {
+            cart.push({
+                quantity: input.value,
+                name,
+                price
+            });
+            printCartItems();
+        }
+    }
+
+
+    function printCartItems() {
+        const list = document.querySelector('.aside ul');
+        list.innerHTML =  '';
+        cart.forEach(item => 
+            list.innerHTML += `<li>${item.name} / ${item.quantity} / ${item.price}</li>`
+        )}
+
+    let selectSection = document.querySelector('.section');
 
     items.forEach((item, i) => {
-        sec.innerHTML += `<article class ="item"><img src="${item.img}"/>
+        selectSection.innerHTML += `<article class ="item">
+        <img src="${item.img}"/>
         <p>${item.name}</p>
-        <small>$${String(item.price)}.00</small>
+        <small>$${String(item.price)}</small>
+        <div class="littleform">
+             <input class="quantity" type="number" placeholder="quantity" onchange = 'inputChange(
+                 ${i}, 
+                  "${item.name}",  
+                  "${item.price}" ) '/>
+            <button class="add">Add to cart</button>
+        </div>
         </article>`;
     });
-
-
-
 
 }
