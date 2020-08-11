@@ -45,19 +45,25 @@ body {
         position: fixed;
 
         @media (max-width: 767px) {
-            width: 100%;
+            width: 90%;
             display: block;
             height: auto;
             float: none;
+            margin: 10%;
         }
 
         .items {
             p {
                 margin-left: 30px;
+                margin-top: 15px;
                 display: inline-block;
                 font-size: $text + 0.2;
                 color: $graylight;
             }
+        }
+
+        #total {
+            margin: 10px 15px;
         }
     }
 }
