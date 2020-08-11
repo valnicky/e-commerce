@@ -62,7 +62,7 @@ function init() {
             img: 'img/strawberries.png'
         },
         {
-            name: Chocolate cake,
+            name: 'Chocolate cake',
             price: 22,
             img: 'img/tart.png'
         }
