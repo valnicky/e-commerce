@@ -119,9 +119,4 @@ function init() {
         `
     });
 
-
-    function inputChange() {
-        alert('heyyy');
-    }
-
 }
