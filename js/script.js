@@ -102,7 +102,7 @@ function init() {
         totalElement.innerText = `$${total}`;
     }
 
-    let selectSection = document.querySelector('.section');
+    let selectSection = document.querySelector('section');
 
     items.forEach((item, i) => {
         selectSection.innerHTML += `
@@ -119,6 +119,6 @@ function init() {
             </div>
         </article> 
         `
-    })
+    });
 
 }
