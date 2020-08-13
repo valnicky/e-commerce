@@ -66,7 +66,7 @@ function init() {
             price: 22,
             img: 'img/tart.png'
         }
-    ]
+    ];
 
     let cart = [];
 
@@ -74,7 +74,7 @@ function init() {
         const article = document.querySelectorAll('article')[i];
         const btn = article.querySelector('button');
         const input = article.querySelector('input');
-        console.log('btn', input.value);
+        console.log('button', input.value);
 
         btn.onclick = () => {
             cart.push({
@@ -110,15 +110,18 @@ function init() {
             <img src="${item.img}"/>
             <p>${item.name}</p>
             <small>$${String(item.price)}.00</small>
-            <div class="littleform">
-                 <input class = "quantity" type = "number" placeholder =  0  onchange  = "inputChange( 
-                 ${i}, 
-                 '${item.name}',
-                 '${item.price}' )" />
+            <div>
+                 <input  type ="number" placeholder="quantity" onchange=
+                 "inputChange(${i},'${item.name}','${item.price}')" />
                 <button class="add">Add to cart</button>
             </div>
         </article> 
         `
     });
+
+
+    function inputChange() {
+        alert('heyyy');
+    }
 
 }
